@@ -1,7 +1,7 @@
 # aula1
 Aula da disciplina de Ferramentas de Programação
 
-## JPA
+## Anotações
 @Entity
 @Table
 @Id
