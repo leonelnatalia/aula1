@@ -2,6 +2,7 @@
 package br.edu.ifsp.pep.modelo;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -28,7 +29,7 @@ private String descricao;
 private int quantidade;
 
 @Column(name = "preco", nullable = false)
-private float preco;
+private BigDecimal preco;
 
 @JoinColumn(name= "categoria_id", nullable =false)
 @ManyToOne
@@ -58,14 +59,15 @@ private Categoria categoria;
         this.quantidade = quantidade;
     }
 
-    public float getPreco() {
+    public BigDecimal getPreco() {
         return preco;
     }
 
-    public void setPreco(float preco) {
+    public void setPreco(BigDecimal preco) {
         this.preco = preco;
     }
 
+    
     public Categoria getCategoria() {
         return categoria;
     }
@@ -73,5 +75,7 @@ private Categoria categoria;
     public void setCategoria(Categoria categoria) {
         this.categoria = categoria;
     }
+    
+    
 
 }
